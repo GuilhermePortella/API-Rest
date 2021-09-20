@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.br.tudo.Configuration;
+package com.br.todo.Configuration;
 
-import com.br.tudo.services.DBService;
+import com.br.todo.services.DBService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

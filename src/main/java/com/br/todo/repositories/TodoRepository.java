@@ -1,11 +1,11 @@
-package com.br.tudo.repositories;
+package com.br.todo.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.br.tudo.domain.Todo;
+import com.br.todo.domain.Todo;
 
 @Repository
-public interface TudoRepository extends JpaRepository<Todo, Integer> {
+public interface TodoRepository extends JpaRepository<Todo, Integer> {
 
 }

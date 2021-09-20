@@ -1,4 +1,4 @@
-package com.br.tudo;
+package com.br.todo;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
