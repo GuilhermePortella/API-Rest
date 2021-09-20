@@ -1,4 +1,4 @@
-package com.br.tudo.domain;
+package com.br.todo.domain;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;

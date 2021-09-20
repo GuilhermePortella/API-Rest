@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.br.tudo.services;
+package com.br.todo.services;
 
-import com.br.tudo.domain.Todo;
-import com.br.tudo.repositories.TudoRepository;
+import com.br.todo.domain.Todo;
+import com.br.todo.repositories.TodoRepository;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
@@ -21,7 +21,7 @@ import org.springframework.stereotype.Service;
 public class DBService {
 
     @Autowired
-    private TudoRepository tudoRepository;
+    private TodoRepository todoRepository;
 
     public void instanciaBaseDeDados() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
@@ -29,7 +29,7 @@ public class DBService {
         Todo t1 = new Todo(null, "Estudar", "Estudar Spring boot 2 e angular 11", LocalDateTime.parse("25/03/2022 10:40", formatter), false);
         Todo t2 = new Todo(null, "Pequeno teste", "linha feita e criada sem comandos diretos", LocalDateTime.parse("19/09/2021 21:54", formatter), true);
 
-        tudoRepository.saveAll(Arrays.asList(t1, t2));
+        todoRepository.saveAll(Arrays.asList(t1, t2));
     }
 
 }
