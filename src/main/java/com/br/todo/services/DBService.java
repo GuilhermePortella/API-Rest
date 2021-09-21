@@ -27,9 +27,11 @@ public class DBService {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 
         Todo t1 = new Todo(null, "Estudar", "Estudar Spring boot 2 e angular 11", LocalDateTime.parse("25/03/2022 10:40", formatter), false);
-        Todo t2 = new Todo(null, "Pequeno teste", "linha feita e criada sem comandos diretos", LocalDateTime.parse("19/09/2021 21:54", formatter), true);
+        Todo t2 = new Todo(null, "Pequeno teste 1", "linha feita e criada sem comandos diretos", LocalDateTime.parse("19/09/2021 21:54", formatter), true);
+        Todo t3 = new Todo(null, "Pequeno teste 2", "Sem dor sem ganho", LocalDateTime.parse("20/09/2021 18:20", formatter), false);
+        Todo t4 = new Todo(null, "Pequeno teste 3", "Estudar mais", LocalDateTime.parse("20/09/2021 18:21", formatter), true);
 
-        todoRepository.saveAll(Arrays.asList(t1, t2));
+        todoRepository.saveAll(Arrays.asList(t1, t2, t3, t4));
     }
 
 }
