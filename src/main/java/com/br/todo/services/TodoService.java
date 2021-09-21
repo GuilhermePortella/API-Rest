@@ -7,6 +7,7 @@ package com.br.todo.services;
 
 import com.br.todo.domain.Todo;
 import com.br.todo.repositories.TodoRepository;
+import com.br.todo.services.exeptions.ObjctNotFoundException;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ public class TodoService {
 
     public Todo findById(Integer id) {
         Optional<Todo> obj = repository.findById(id);
-        return obj.orElse(null);
+        return obj.orElseThrow(() -> new ObjctNotFoundException("Objeto não encontrado! Id: " + id + ", Tipo: " + Todo.class.getName()));
     }
 
     public List<Todo> findAllOpen() {
