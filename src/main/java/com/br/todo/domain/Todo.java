@@ -61,7 +61,7 @@ public class Todo implements Serializable {
         this.dataParaFianalizar = dataParaFianalizar;
     }
 
-    public boolean isFinalizado() {
+    public boolean getFinalizado() {
         return finalizado;
     }
 
